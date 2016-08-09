@@ -47,42 +47,42 @@ exports.save = function(user, callback){
 };
 
 
-exports.update = function(user, callback) {
+// exports.update = function(user, callback) {
 
-	db.User.findById(user._id, function(error, user) {
+// 	db.User.findById(user.id, function(error, user) {
 
-		if(name) {
+// 		if(name) {
 
-			user.fullname = fullname;
-		}
+// 			user.fullname = fullname;
+// 		}
 
-		if(email) {
+// 		if(email) {
 
-			user.email = email;
-		}
+// 			user.email = email;
+// 		}
 
-		if(username) {
+// 		if(username) {
 
-			user.username = username;
-		}
+// 			user.username = username;
+// 		}
 
-		if(password) {
+// 		if(password) {
 
-			user.password = password;
-		}
+// 			user.password = password;
+// 		}
 
-		user.save(function(error, user) {
+// 		user.save(function(error, user) {
 
-			if(error) {
+// 			if(error) {
 
-				callback({error: 'Não foi possivel salvar o usuario'});
-			} else {
+// 				callback({error: 'Não foi possivel salvar o usuario'});
+// 			} else {
 
-				callback(user);
-			}
-		});
-	});
-};
+// 				callback(user);
+// 			}
+// 		});
+// 	});
+// };
 
 
 exports.delete = function(id, callback) {

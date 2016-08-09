@@ -185,16 +185,15 @@ app.post('/characters', function (req, res) {
 	//res.end();
 });
 
-app.put('/users', function (req, res) {
+// app.put('/users', function (req, res) {
 		
-	var user = req.body;
-	
-	userController.update(user , function(resp){
-		res.json(resp);
+// 	var user = req.body;
+// 	userController.update(user , function(resp){
+// 		res.json(resp);
 
-	});
+// 	});
 
-});
+// });
 
 
 
