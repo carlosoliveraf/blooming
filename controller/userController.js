@@ -47,28 +47,28 @@ exports.save = function(user, callback){
 };
 
 
-exports.update = function(user, callback) {
+exports.update = function(userEdit, callback) {
 
 	db.User.findById(user.id, function(error, user) {
 
-		if(name) {
+		if(userEdit.name) {
 
-			user.fullname = fullname;
+			user.fullname = userEdit.fullname;
 		}
 
-		if(email) {
+		if(userEdit.email) {
 
-			user.email = email;
+			user.email = userEdit.email;
 		}
 
-		if(username) {
+		if(userEdit.username) {
 
-			user.username = username;
+			user.username = userEdit.username;
 		}
 
-		if(password) {
+		if(userEdit.password) {
 
-			user.password = password;
+			user.password = userEdit.password;
 		}
 
 		user.save(function(error, user) {
