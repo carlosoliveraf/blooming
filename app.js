@@ -185,12 +185,26 @@ app.post('/characters', function (req, res) {
 	//res.end();
 });
 
+app.put('/users', function (req, res) {
+		
+	var id = req.param('id');
+	var name = req.param('name');
+	var email = req.param('email');
+	var username = req.param('username');
+	var password = req.param('password');
+	
+	userController.update(id, name, email, username, password , function(resp){
+		res.json(resp);
+
+	});
+
+});
+
 
 
 app.delete('/characters/:id', function (req, res) {
 
 	var id = req.param('id');
-		
 		characterController.delete(id, function(resp){
 			res.json(resp);
 
