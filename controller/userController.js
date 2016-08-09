@@ -51,26 +51,7 @@ exports.update = function(id, callback) {
 
 	db.User.findById(id, function(error, user) {
 
-		if(userEdit.name) {
-
-			user.name = userEdit.name;
-		}
-
-		if(userEdit.email) {
-
-			user.email = userEdit.email;
-		}
-
-		if(userEdit.username) {
-
-			user.username = userEdit.username;
-		}
-
-		if(userEdit.password) {
-
-			user.password = userEdit.password;
-		}
-
+		
 		user.save(function(error, user) {
 
 			if(error) {
