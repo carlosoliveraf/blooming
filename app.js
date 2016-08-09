@@ -142,6 +142,19 @@ app.get('/users', function (req, res) {
 	//res.json(itens);
 });
 
+app.get('/users/:id', function (req, res) {
+
+	var id = req.param('id');
+	userController.user(id, function(resp){
+		res.json(resp);
+
+	});
+
+
+	//res.status(500).end();
+	// res.json(itens);
+});
+
 app.post('/users', function (req, res) {
 
 	
