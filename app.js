@@ -186,9 +186,9 @@ app.post('/characters', function (req, res) {
 });
 
 app.put('/users', function (req, res) {
-		
-	var user = req.body;
-	userController.update(user , function(resp){
+	
+	var id = req.param('_id');
+	userController.update(id , function(resp){
 		res.json(resp);
 
 	});

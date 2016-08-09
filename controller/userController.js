@@ -47,13 +47,13 @@ exports.save = function(user, callback){
 };
 
 
-exports.update = function(userEdit, callback) {
+exports.update = function(id, callback) {
 
-	db.User.findById(user.id, function(error, user) {
+	db.User.findById(id, function(error, user) {
 
 		if(userEdit.name) {
 
-			user.fullname = userEdit.fullname;
+			user.name = userEdit.name;
 		}
 
 		if(userEdit.email) {
