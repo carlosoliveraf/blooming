@@ -49,7 +49,7 @@ exports.save = function(user, callback){
 
 exports.update = function(id, name, email, username, password, callback) {
 
-	db.User.findById(id, function(error, user) {
+	db.User.findById(id, function(error, id, name, email, username, password) {
 
 		if(name) {
 
